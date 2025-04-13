@@ -3,60 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>註冊 - 智能減碳錢包</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Microsoft JhengHei', sans-serif;
-      background: url('/static/images/sky background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-    h2 {
-      text-align: center;
-      font-weight: bold;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-    }
-    .button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 20px;
-      background-color: #5ca062;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-  </style>
+  <title>智能減碳錢包 - 註冊</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/register.css') }}">
 </head>
 <body>
   <div class="container">
-    <h2>註冊</h2>
-    <input type="text" placeholder="姓名" />
-    <input type="date" placeholder="生日 (年/月/日)" />
-    <input type="text" placeholder="性別" />
-    <input type="email" placeholder="電子郵件" />
-    <input type="password" placeholder="密碼" />
-    <input type="password" placeholder="確認密碼" />
-    <button class="button">註冊</button>
+    <h1>註冊</h1>
+    <input type="text" id="name" placeholder="姓名" required/>
+    <input type="date" id="birthdate" class="birthdate" required/>
+    <div class="gender-input">
+      <input type="text" id="gender" placeholder="性別" readonly required />
+      <div class="dropdown-options" id="genderOptions">
+        <div>男性</div>
+        <div>女性</div>
+        <div>其他</div>
+      </div>
+    </div>
+    <input type="email" id="email" placeholder="電子郵件" required/>
+    <input type="password" id="password" placeholder="密碼" required/>
+    <input type="password" id="confirm-password" placeholder="確認密碼" required/>
+    <button id="register-button" class="button">註冊</button>
   </div>
+  <script src="{{ url_for('static', filename='script/register.js') }}"></script>
 </body>
 </html>
