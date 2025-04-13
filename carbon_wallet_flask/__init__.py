@@ -9,11 +9,11 @@ def create_app():
    db.init_app(app)
 
    # Import and register routes
-   from carbon_wallet_flask.routes.test import test
    from carbon_wallet_flask.routes.login import login
    from carbon_wallet_flask.routes.register import register
-   app.register_blueprint(test)
+   from carbon_wallet_flask.routes.home import home
    app.register_blueprint(login)
    app.register_blueprint(register)
+   app.register_blueprint(home)
 
    return app

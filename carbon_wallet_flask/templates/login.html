@@ -4,65 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>智能減碳錢包 - 登入</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Microsoft JhengHei', sans-serif;
-      background: url('https://i.imgur.com/L06A7Pc.png') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-      width: 350px;
-    }
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-    }
-    .button {
-      width: 48%;
-      padding: 12px;
-      border: none;
-      border-radius: 20px;
-      margin: 10px 1%;
-      background-color: #5ca062;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .forgot {
-      margin-top: 10px;
-      font-size: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
 </head>
 <body>
   <div class="container">
-    <img src="https://i.imgur.com/IjUJbUN.png" alt="wallet" width="60" />
-    <div class="logo">智能減碳錢包</div>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='image/logo_carbon_wallet.png') }}" alt="wallet" width="60" />
+      <h1>智能減碳錢包</h1>
+    </div>
     <input type="email" placeholder="電子郵件" />
     <input type="password" placeholder="密碼" />
     <div>
-      <button class="button">登入</button>
-      <button class="button">註冊</button>
+      <button class="button login">登入</button>
+      <button class="button register">註冊</button>
     </div>
-    <div class="forgot">忘記密碼？</div>
+    <a class="forgot">忘記密碼？</a>
   </div>
+  <script src="{{ url_for('static', filename='script/login.js') }}"></script>
 </body>
 </html>
