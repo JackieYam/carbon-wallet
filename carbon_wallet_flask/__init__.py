@@ -7,7 +7,6 @@ def create_app():
    app.config.from_object(Config)
 
    db.init_app(app)
-
    # Import and register routes
    from carbon_wallet_flask.routes.test import test
    from carbon_wallet_flask.routes.login import login
