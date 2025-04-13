@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能減碳錢包</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/records.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">📦 智能減碳錢包</div>
+    <nav>
+      <a href="#">總覽頁面</a>
+      <a href="#">記錄碳排</a>
+      <a href="#">統計圖表</a>
+      <a href="#">帳號管理</a>
+      <a href="#">登出</a>
+    </nav>
+  </header>
+
+  <!-- Wallet Section -->
+  <section class="wallet-section">
+    <h2>Unname wallet</h2>
+    <table class="carbon-table">
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>類別</th>
+          <th>描述</th>
+          <th>金額</th>
+          <th>CO2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025/04/13</td>
+          <td>Restaurant</td>
+          <td>松屋消費收據</td>
+          <td>1200NT</td>
+          <td>56kg</td>
+        </tr>
+        <tr>
+          <td>2025/04/13</td>
+          <td>Transport</td>
+          <td>捷運+北捷票證搭乘</td>
+          <td>480NT</td>
+          <td>24kg</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="submit-btn">新增</button>
+  </section>
+
+  <!-- Product Carbon Footprint Section -->
+  <section class="carbon-footprint">
+    <h2>產品碳足跡</h2>
+    <div class="chart-placeholder">
+      <!-- 圓餅圖可以用 JS 插入 -->
+      <div class="pie-chart">圓餅圖顯示區</div>
+    </div>
+  </section>
+
+</body>
+</html>

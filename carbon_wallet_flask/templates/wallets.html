@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallets</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/wallets.css') }}">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/wallet--v1.png" alt="logo">
+        <span>智能減碳錢包</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">綠色商店</a></li>
+          <li><a href="#">理財錢包</a></li>
+          <li><a href="#">帳戶管理</a></li>
+          <li><a href="#">註冊/登入</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wallet-container">
+    <div class="wallet-left">
+      <img src="https://img.icons8.com/color/96/wallet--v1.png" alt="wallet icon">
+    </div>
+    <div class="wallet-right">
+      <button class="manage-btn">管理錢包</button>
+
+      {% for wallet in wallets %}
+        <div class="wallet-card">{{ wallet }}</div>
+      {% endfor %}
+
+      <button class="add-btn">增加錢包</button>
+    </div>
+  </main>
+</body>
+</html>
