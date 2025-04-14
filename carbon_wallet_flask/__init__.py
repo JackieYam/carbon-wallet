@@ -13,11 +13,13 @@ def create_app():
    from carbon_wallet_flask.routes.homepage import homepage
    from carbon_wallet_flask.routes.wallets import wallets
    from carbon_wallet_flask.routes.records import records
-   
+   from carbon_wallet_flask.routes.greenshop import greenshop
+
    app.register_blueprint(homepage)
    app.register_blueprint(test)
    app.register_blueprint(login)
    app.register_blueprint(register)
    app.register_blueprint(wallets)
    app.register_blueprint(records)
+   app.register_blueprint(greenshop)
    return app
