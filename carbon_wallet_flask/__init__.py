@@ -1,7 +1,6 @@
 from flask import Flask
 from config import Config
 from carbon_wallet_flask.models import db
-
 def create_app():
    app = Flask(__name__, instance_relative_config=True)
    app.config.from_object(Config)
@@ -14,6 +13,7 @@ def create_app():
    from carbon_wallet_flask.routes.homepage import homepage
    from carbon_wallet_flask.routes.wallets import wallets
    from carbon_wallet_flask.routes.records import records
+   
    app.register_blueprint(homepage)
    app.register_blueprint(test)
    app.register_blueprint(login)

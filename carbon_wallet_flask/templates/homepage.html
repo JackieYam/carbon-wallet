@@ -16,9 +16,10 @@
       <nav>
         <ul>
           <li><a href="#">綠色商店</a></li>
-          <li><a href="#">理財錢包</a></li>
+          <li><a href="/wallets">理財錢包</a></li>
           <li><a href="#">帳戶管理</a></li>
-          <li><a href="#">登出</a></li>
+          <li><a href="#">减碳AI顧問</a></li>
+          <li><a href="/login">登出</a></li>
         </ul>
       </nav>
     </div>
@@ -26,9 +27,11 @@
 
   <main class="hero">
     <div class="hero-content">
-      <img src="https://img.icons8.com/color/96/wallet--v1.png" alt="wallet icon">
+      <img src="{{ url_for('static', filename='image/logo_carbon_wallet.png') }}" alt="wallet icon">
       <p>用 AI 助你追蹤消費、計算碳足跡，打造屬於你的綠色生活。</p>
     </div>
   </main>
+
+  <script src="{{ url_for('static', filename='script/homepage.js') }}"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (response.ok) {
             const data = await response.json();
             if (data.success) {
-               window.location.href = "/home";
+               window.location.href = "/homepage";
             } else {
                alert(data.error || "帳號或密碼錯誤！");
             }
